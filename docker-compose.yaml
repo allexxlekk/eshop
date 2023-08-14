@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql
+    container_name: eshop
+    hostname : eshop
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: eshop
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+
+volumes:
+  db_data:
