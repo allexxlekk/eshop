@@ -1,0 +1,6 @@
+version: '3'
+services:
+  echo_service:
+    image: alpine
+    command: >
+      /bin/sh -c "echo Hello from Docker Compose!"
